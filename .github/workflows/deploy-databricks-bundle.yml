@@ -14,6 +14,7 @@ jobs:
     - name: Setup uv and databricks cli
       run: |
         make install
+        uv add pytest
         uv build
     - name: install-databricks-cli
       uses: databricks/setup-cli@main
