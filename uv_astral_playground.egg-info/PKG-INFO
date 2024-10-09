@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: uv-astral-playground
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.1.0
+Requires-Dist: pyspark>=3.5.3
+Requires-Dist: pytest>=8.3.3
+Requires-Dist: ruff>=0.6.8
+Requires-Dist: setuptools>=75.1.0
+Requires-Dist: tool>=0.8.0
+
+# uv_astral_playground
