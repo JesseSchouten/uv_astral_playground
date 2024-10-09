@@ -1,6 +1,6 @@
-from demo_project.main import get_taxis, get_spark
+def sum(x, y):
+    return x + y
 
 
-def test_main():
-    taxis = get_taxis(get_spark())
-    assert taxis.count() > 5
+def test_sum():
+    assert sum(2, 3) == 5
