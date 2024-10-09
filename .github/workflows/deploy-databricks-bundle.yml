@@ -31,7 +31,8 @@ jobs:
     - name: Deploy Databricks Asset Bundle
       run: |
         # Example command to create or update a Databricks job or other asset
-        uv run databricks bundle deploy --target dev --bundle-root ./demo_project
+        uv run databricks bundle deploy --target dev
+      working-directory: ./demo_project
     - name: Notify on success or failure
       if: failure()
       run: echo "Deployment to Databricks failed" || echo "Deployment successful"
