@@ -5,6 +5,7 @@ Summary: Add your description here
 Requires-Python: >=3.10
 Description-Content-Type: text/markdown
 Requires-Dist: pandas>=2.1.0
+Requires-Dist: pytest>=8.3.3
 Requires-Dist: ruff>=0.6.8
 Requires-Dist: setuptools>=75.1.0
 Requires-Dist: tool>=0.8.0

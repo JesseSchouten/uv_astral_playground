@@ -2,6 +2,7 @@ SHELL :=/bin/bash
 
 install:
 	curl -LsSf https://astral.sh/uv/install.sh | sh
+	
 	source ~/.bashrc
 
 setup:
@@ -9,7 +10,8 @@ setup:
 	@echo "Setting up the project..."
 
 	uv python install
-
+	uv add pytest
+	
 	curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh
 	@echo "Setup finished.."
 
