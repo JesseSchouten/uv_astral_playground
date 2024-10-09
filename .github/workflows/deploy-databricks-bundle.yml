@@ -36,3 +36,8 @@ jobs:
     - name: Notify on success or failure
       if: failure()
       run: echo "Deployment to Databricks failed" || echo "Deployment successful"
+    # Optional: Run unit tests after deployment (if applicable)
+    - name: Run Unit Tests (Optional)
+      run: |
+        # Example to run tests
+        python -m pytest demo_project/tests/
