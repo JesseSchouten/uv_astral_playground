@@ -11,7 +11,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-
     - name: Setup uv and databricks cli
       run: |
         make install
@@ -32,12 +31,10 @@ jobs:
     - name: Deploy Databricks Asset Bundle
       run: |
         # Example command to create or update a Databricks job or other asset
-        uv run databricks bundle deploy --target dev
-
+        uv run databricks bundle deploy --target dev --bundle-root ./demo_project
     - name: Notify on success or failure
       if: failure()
       run: echo "Deployment to Databricks failed" || echo "Deployment successful"
-
     # Optional: Run unit tests after deployment (if applicable)
     - name: Run Unit Tests (Optional)
       run: |
