@@ -18,11 +18,8 @@ jobs:
         uv build
     - name: Verify Databricks CLI installation
       run: |
-        curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh
-        echo "::add-path::/usr/local/bin"
-        echo "PATH set to: $PATH"
-        echo "::add-path::$HOME/bin"
-        echo "PATH set to: $PATH"
+        sudo curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh
+        echo "$HOME/bin" >> $GITHUB_PATH  # Update the PATH using GitHub's environment file
         databricks -v
         which databricks
     - name: Set up Databricks CLI
