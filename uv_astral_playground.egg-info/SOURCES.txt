@@ -1,0 +1,8 @@
+README.md
+hello.py
+pyproject.toml
+uv_astral_playground.egg-info/PKG-INFO
+uv_astral_playground.egg-info/SOURCES.txt
+uv_astral_playground.egg-info/dependency_links.txt
+uv_astral_playground.egg-info/requires.txt
+uv_astral_playground.egg-info/top_level.txt

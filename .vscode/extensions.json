@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "bierner.markdown-mermaid",
+    "corschenzi.mermaid-graphical-editor",
+    "davidanson.vscode-markdownlint",
+    "tamasfe.even-better-toml"
+  ]
+}

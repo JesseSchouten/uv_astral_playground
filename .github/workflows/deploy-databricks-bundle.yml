@@ -1,0 +1,37 @@
+name: Deploy Databricks Asset Bundle to Development
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Set up Databricks CLI with environment secrets
+    - name: Set up Databricks CLI
+      run: |
+        make setup
+        databricks configure --token
+      env:
+        DATABRICKS_HOST: ${{ vars.DATABRICKS_HOST }}
+        DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+
+    # Build and Deploy the asset bundle to Databricks
+    - name: Deploy Databricks Asset Bundle
+      run: |
+        # Example command to create or update a Databricks job or other asset
+        uv run databricks bundle deploy --target dev
+
+    - name: Notify on success or failure
+      if: failure()
+      run: echo "Deployment to Databricks failed" || echo "Deployment successful"
+
+    # Optional: Run unit tests after deployment (if applicable)
+    - name: Run Unit Tests (Optional)
+      run: |
+        # Example to run tests
+        python -m pytest demo_project/tests/
