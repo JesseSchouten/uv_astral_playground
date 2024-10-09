@@ -1,10 +1,12 @@
 SHELL :=/bin/bash
 
+install:
+	curl -LsSf https://astral.sh/uv/install.sh | sh
+	source ~/.bashrc
+
 setup:
 	sudo apt update
 	@echo "Setting up the project..."
-	curl -LsSf https://astral.sh/uv/install.sh | sh
-	source ~/.bashrc
 
 	uv python install
 

@@ -1,6 +1,12 @@
 README.md
 hello.py
 pyproject.toml
+demo_project/setup.py
+demo_project/build/lib/demo_project/__init__.py
+demo_project/build/lib/demo_project/main.py
+demo_project/src/demo_project/__init__.py
+demo_project/src/demo_project/main.py
+demo_project/tests/main_test.py
 uv_astral_playground.egg-info/PKG-INFO
 uv_astral_playground.egg-info/SOURCES.txt
 uv_astral_playground.egg-info/dependency_links.txt
