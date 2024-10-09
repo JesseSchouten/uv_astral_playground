@@ -16,10 +16,10 @@ jobs:
       run: |
         make install
         uv build
+    - name: install-databricks-cli
+      uses: databricks/setup-cli@main
     - name: Verify Databricks CLI installation
       run: |
-        sudo curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh
-        echo "$HOME/bin" >> $GITHUB_PATH  # Update the PATH using GitHub's environment file
         databricks -v
         which databricks
     - name: Set up Databricks CLI
