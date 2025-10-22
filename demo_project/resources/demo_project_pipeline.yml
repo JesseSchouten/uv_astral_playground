@@ -1,0 +1,12 @@
+# The main pipeline for demo_project
+resources:
+  pipelines:
+    demo_project_pipeline:
+      name: demo_project_pipeline
+      target: demo_project_${bundle.environment}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: /Workspace/${workspace.file_path}/src
